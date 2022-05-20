@@ -15,3 +15,54 @@ h1,h2,h3 {
 p {
   color: #828b8a;
 }
+
+/* Tutorial styles */
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #bbc7c7;
+}
+.grid-container {
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+article.featured {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  border-bottom: 1px solid #bbc7c7;
+  padding-bottom: 40px;
+}
+article {
+  grid-column: span 1;
+}
+article img {
+  width: 100%;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+article p {
+  text-align: justify;
+}
+/* responsive */
+@media screen and (max-width: 980px) {
+  .grid-container article {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .grid-container article {
+    grid-template-columns: 1fr;
+  }
+}
